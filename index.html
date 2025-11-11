@@ -1,125 +1,361 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id" style="scroll-behavior: smooth;">
 <head>
-  <meta charset="utf-8" />
-  <title>ayam</title>
-  <!-- Made by Feeldream.id -->
-  <meta name="description" content="TikTok @feelthisray - Script HTML by Feeldream.id">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <meta name="description" content="Script HTML Spesial Untuk Kamuuuuu">
-  <meta property="og:title" content="HTML Spesial Untukmu ✨">
-  <meta property="og:description" content="Dibuka yaaa ❤️">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg">
-  <meta property="og:image:alt" content="ayangku">
-  <meta property="og:url" content="htmlku.com/gaboleya">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" type="image/svg+xml" href="https://feeldreams.github.io/main-icon.png"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/scrollreveal"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script><link rel="stylesheet" href="https://htmlku.com/bolehminta/style.css">
-
+    <meta charset="UTF-8" />
+    <title>Biodata Fansuri Putra Raja Jakarta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            animation: fadeOut 3s ease-in-out 2s forwards;
+        }
+        .welcome-screen h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-100px); }
+        }
+        .home {
+            background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .topbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .navbar {
+            display: flex;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        .navbar a:hover, .navbar a.active {
+            color: #ffd700;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero-content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid white;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .tentang, .pendidikan, .keterampilan, .kontak {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        .tentang p {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .pendidikan ul, .keterampilan ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pendidikan li, .keterampilan li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #667eea;
+        }
+        .kontak form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .kontak input, .kontak textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .kontak button {
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .kontak button:hover {
+            background: #5a67d8;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            .hero-content img {
+                width: 120px;
+                height: 120px;
+            }
+            section h2 {
+                font-size: 2.2rem;
+            }
+            .tentang, .pendidikan, .keterampilan, .kontak {
+                padding: 30px;
+            }
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .navbar a {
+                margin: 5px 10px;
+                font-size: 14px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .hero-content img {
+                width: 100px;
+                height: 100px;
+            }
+            section {
+                padding: 60px 10px;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .tentang, .pendidikan, .keterampilan, .kontak {
+                padding: 20px;
+            }
+            .tentang p {
+                font-size: 1rem;
+            }
+            .pendidikan li, .keterampilan li {
+                padding: 10px;
+            }
+            .kontak form {
+                max-width: 100%;
+            }
+        }
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .welcome-screen h1 {
+                font-size: 2.5rem;
+            }
+            .logo {
+                font-size: 18px;
+            }
+            .navbar a {
+                margin: 5px;
+                font-size: 12px;
+            }
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            .hero-content img {
+                width: 80px;
+                height: 80px;
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+            .tentang, .pendidikan, .keterampilan, .kontak {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            .pendidikan li, .keterampilan li {
+                padding: 8px;
+                font-size: 14px;
+            }
+            .kontak input, .kontak textarea {
+                padding: 8px;
+            }
+            .kontak button {
+                padding: 8px;
+            }
+            footer {
+                padding: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <audio src="https://feeldreams.github.io/audio/foreveryoung.mp3" id="linkmp3" class="sembunyi"></audio>
-	<div class="overlay">
-    <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
-     <div id="loveIn" class="blocklove">
-        <a href="#" target="_blank" class="lovein"></a>
-        <p id="ket">Sentuh love nya ryll!</p>
-     </div>
-   </div>
-   
-   <div id="bodyblur">
-     <img src="https://feeldreams.github.io/wpnime.jpg" id="wallpaper"/>
-     <div id="thisblur"></div>
-   </div>
-   
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-            	<div class="kotak">
-                <div id="stiker1" class="scale0 stiker">
-                    <img src="https://htmlku.com/0/panda/pusn3.gif" />
-                </div>
-                <h1 id="teks1" class="scale0 quicksand" style="font-size: 20px;">Alooo Beryl imupp😫! 🫣<br><br><span style="font-size:16.5px;font-weight:400">Aku Ada Pantun buat Kamuuu 🫢</span><br><br> >>>>
-                </h1>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-            	<div class="kotak">
-                <div id="stiker2" class="scale0 stiker">
-                    <img id="stiker2a" src="https://htmlku.com/0/panda/pusn.gif" />
-                    <img id="stiker2b" class="sembunyi" src="https://htmlku.com/0/panda/cubit.gif" />
-                </div>
-                <h1 id="teks2" class="scale0 quicksand" style="font-size: 19px;"><span style="font-size: 19px;">Makan Kebab di Atas Atap,<br>Boleh Ngga <span style="color:pink">Aku Minta Pap</span>? 🫣</span></h1>
-                <h1 id="teks2b" class="sembunyi"><span style="font-size: 18px;">Yakin Gamau Kirim Pap ke Aku? 🙂‍↕️<br><span style="font-size:16.5px;font-weight:400">Memori HP-ku Masih Banyak Lohh 😬</span></span></h1>
-                <div id="Tombol" style="opacity:0;transform: scale(0)">
-                    <a id="By" onClick="this.style.transform='scale(0.8)'; this.style.transition='all 0.3s ease'; this.onclick=null; setTimeout(() => swiper.slideNext(), 200);">Boleh 🎉</a>
-                    <a id="Bn" onClick="btn='Bn';fungsibaru(btn)">Ngga 🤬</a>
-                </div>
-                <img id="stikerTolak" class="sembunyi" src="https://htmlku.com/0/panda/cubit.gif"/>
-                <p id="teksTolak" class="sembunyi">Ciee ngambekan gitu doang 😋😝</p>
-                
-                <img id="stikerTolak2" class="sembunyi" src="https://feeldreams.github.io/weee.gif"/>
-                <p id="teksTolak2" class="sembunyi">Nanti cepet tua loh 🫣🤣</p>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div id="stiker3" class="scale0 stiker" style="margin-top:50px">
-                    <img id="stikerAkhir1" src="https://htmlku.com/0/panda/terlope2.gif" />
-                    <img id="stikerAkhir2" class="sembunyi" src="https://htmlku.com/0/panda/muah.gif" />
-                    <img id="stikerAkhir3" class="sembunyi" src="https://htmlku.com/0/panda/panah.gif" />
-                </div>
-                <div id="scroll-container" class="blocktext">
-                    <h1 id="teks3" class="scale0 quicksand" style="font-size: 17px;font-weight:400"><span style="font-size: 18px"><b>Yeaayyy!</b> Makasii yaww 🥳🎉</span><br><br>Sekarang, <b>Kamu Tau Ga?</b> 🫣<br><br><b>Panda</b>, Panda Apa yang<br>Suka Bikin Aku Salting? 🫢🤏</h1>
-                    <h1 id="teks3a" class="sembunyi"><i>Jawabannya...</i> ᯓᡣ𐭩</h1>
-                    <h1 id="teks3b" class="sembunyi">Pandangin foto kamu tiap hari~ <b>𖹭.ᐟ</b><br>😝😍🥳💖🌹</h1>
-                </div>
-                <div id="Tombol2" style="opacity:0;transform: scale(0)">
-                    <a onClick="this.style.transform='scale(0.8)'; this.style.transition='all 0.3s ease'; setTimeout(() => {tampilModal();this.style.transform='scale(1)'; this.style.transition='all 0.3s ease';}, 200);">💌 Balas</a>
-                </div>
-                <script>
-                	const nomorWaTujuan = 6285693147646; // ganti dengan nomor WhatsApp tujuan
-                    const textPesanWa = 'Nih Papnyaa 🫣❤️';
-                
-                	function tampilModal() {
-					    Swal.fire({
-					      title: 'Kirim Pap ke WhatsApp<br>Aku yaa! 🥳🎉',
-					      imageUrl: stikerAkhir3.src,
-					      imageWidth: 90,
-					      imageHeight: 90,
-					      allowOutsideClick: false, 
-					      showCancelButton: false,
-					      confirmButtonText: '💌 Kirim',
-					      cancelButtonText: 'Nanti aja',
-					    }).then((result) => {
-					      if (result.isConfirmed) {
-					        window.location.href = 'https://wa.me/' + nomorWaTujuan;
-                            window.location.href = 'https://api.whatsapp.com/send/?phone=' + nomorWaTujuan + '&text=' + textPesanWa;
-					      }
-					    });
-					}
-                </script>
-            </div>
-
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome-screen">
+        <h1>Welcome</h1>
     </div>
-    
-    <!-- Circle Animation -->
-    <div id="circgroup"><div><div class="circ"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://htmlku.com/bolehminta/script.js"></script>
-  
+    <!-- Home -->
+    <div class="home" id="home">
+        <div class="topbar">
+            <div class="logo">Fansuri Putra Raja Jakarta</div>
+            <div class="navbar">
+                <a href="#tentang">Tentang</a>
+                <a href="#pendidikan">Pendidikan</a>
+                <a href="#keterampilan">Keterampilan</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </div>
+        <div class="hero-content">
+            <img src="img/photo.jpg" alt="Foto Profil Fansuri Putra Raja Jakarta">
+            <h1>Selamat Datang di Biodata Saya</h1>
+            <p>Halo, saya Fansuri Putra Raja Jakarta. Mari kenali lebih lanjut tentang saya!</p>
+        </div>
+    </div>
+
+    <!-- Tentang -->
+    <section id="tentang" class="tentang">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah mahasiswa yang antusias dalam bidang teknologi dan desain. Saya suka belajar hal baru, terutama dalam pengembangan web dan kreativitas digital. Di waktu luang, saya menikmati membaca buku dan berolahraga.</p>
+        <p><strong>Umur:</strong> 18 tahun<br><strong>Lokasi:</strong> Jakarta, Indonesia<br><strong>Hobi:</strong> Coding, Fotografi, Musik</p>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="pendidikan">
+        <h2>Pendidikan</h2>
+        <ul>
+            <li><strong>SDN 01</strong> - Lulusan</li>
+            <li><strong>SMPN 193</strong> - Lulusan</li>
+            <li><strong>SMK Global Cendekia</strong> (TKJ) - Kelas 3</li>
+        </ul>
+    </section>
+
+    <!-- Keterampilan -->
+    <section id="keterampilan" class="keterampilan">
+        <h2>Keterampilan</h2>
+        <ul>
+            <li>Desain Grafis - Mahir</li>
+            <li>HTML dan CSS - Mahir</li>
+            <li>Office - Menengah</li>
+        </ul>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="kontak">
+        <h2>Kontak</h2>
+        <form action="#" method="post">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+        <p>Email: fansuri@example.com | Telepon: +62 812-3456-7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Biodata Fansuri Putra Raja Jakarta. Dibuat dengan ❤️.</p>
+    </footer>
+
+    <script>
+        // Remove welcome screen after animation ends
+        const welcomeScreen = document.getElementById('welcome-screen');
+        welcomeScreen.addEventListener('animationend', () => {
+            welcomeScreen.remove();
+        });
+
+        // Simple script to highlight active navbar link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar a');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
