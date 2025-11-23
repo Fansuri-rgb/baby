@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Untuk Ceweku Tersayang</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #FDB99B 0%, #CF8BF3 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            margin: 0 0 10px 0;
+            text-align: center;
+            text-shadow: 2px 2px 6px #8d2f91;
+        }
+        /* Welcome Screen Overlay */
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #a0f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            flex-direction: column;
+            text-align: center;
+        }
+        #welcome-screen h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px #3a0059;
+        }
+        #love-button {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8em;
+            color: #fff;
+            background-color: #ff2f92;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 20px 5px rgba(255, 47, 146, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+        }
+        #love-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px 8px rgba(255, 47, 146, 1);
+        }
+        #love-button:active {
+            transform: scale(0.95);
+        }
+
+        /* Hidden main content initially */
+        #main-content {
+            display: none;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .audio-player {
+            display: none;
+        }
+        .intro-text {
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: 1.4em;
+            line-height: 1.8;
+            text-align: center;
+            text-shadow: 1px 1px 4px #4b2161;
+        }
+        .content-section {
+            max-width: 960px;
+            margin: 40px auto;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            font-size: 1.2em;
+            line-height: 1.7;
+            text-shadow: 1px 1px 4px #4b2161;
+            min-height: 880px;
+        }
+        .long-text {
+            flex: 2;
+            overflow-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.4em;
+        }
+        .gallery {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+            object-fit: cover;
+            animation: pulse 4s infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px 12px rgba(255, 0, 128, 1);
+        }
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px 5px rgba(255, 0, 128, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 40px 12px rgba(255, 0, 128, 1);
+            }
+        }
+        .heart {
+            font-size: 3em;
+            animation: beat 1.2s infinite;
+            color: #ff2f92;
+            margin: 30px auto 20px auto;
+            display: block;
+            text-align: center;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1);}
+            50% { transform: scale(1.3);}
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+            }
+            .intro-text {
+                font-size: 1.2em;
+                margin-bottom: 40px;
+                padding: 0 10px;
+            }
+            .content-section {
+                flex-direction: column;
+                min-height: auto;
+                gap: 30px;
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            .long-text {
+                flex: unset;
+                max-width: 100%;
+                justify-content: start;
+            }
+            .gallery {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 10px;
+                max-width: 100%;
+                padding-bottom: 15px;
+                -webkit-overflow-scrolling: touch;
+            }
+            .gallery img {
+                width: 120px;
+                height: 120px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.4);
+            }
+            .gallery img:hover {
+                transform: none;
+                box-shadow: 0 0 20px 5px rgba(255, 0, 128, 0.8);
+            }
+        }
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .intro-text, .content-section {
+                font-size: 0.95em;
+            }
+            .gallery img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-screen">
+        <h2>Selamat Datang, Sayangku</h2>
+        <button id="love-button">❤ Love ❤</button>
+    </div>
+
+    <div id="main-content">
+        <h1>Untuk Ceweku Tersayang</h1>
+        <div class="audio-player">
+            <audio id="audio-player" muted preload="auto" src="song/myyywifeee.mp3" type="audio/mp3"></audio>
+        </div>
+
+        <p class="intro-text">Setiap hari bersamamu adalah anugerah terindah yang aku syukuri. Aku ingin kamu tahu bahwa cintaku untukmu tidak pernah berkurang, malah semakin kuat seiring berjalannya waktu. Tiap detik yang kita habiskan bersama, dunia terasa lebih berarti dan penuh warna.</p>
+
+        <div class="content-section">
+            <div class="long-text">
+                <p>Sayangku, kamu adalah bintang yang selalu bersinar di langit malamku. Aku merasa sangat beruntung memiliki kamu sebagai pendamping hidupku yang penuh kasih dan pengertian. Saat bersama kamu, segala kekhawatiran hilang, dan hati ini dipenuhi kebahagiaan yang sukar diungkapkan dengan kata-kata.</p>
+                <p>Perjalanan cinta kita mungkin tidak selalu mulus, tapi setiap tantangan yang kita hadapi membuat kita lebih kuat dan lebih dekat satu sama lain. Aku berjanji akan selalu ada untukmu, menopangmu, dan mencintaimu tanpa syarat, dalam suka maupun duka.</p>
+                <p>Setiap senyum dan tawa kamu adalah alasan aku terus bersemangat menjalani hari. Aku ingin terus membuat kamu bahagia, karena kebahagiaanmu adalah kebahagiaanku juga. Saat malam tiba, aku tidak pernah melewatkan untuk berdoa agar kita selalu dilindungi dan terus bersama sampai akhir hayat.</p>
+                <p>Terima kasih telah menjadi kamu, yang selalu mengisi hidupku dengan cinta dan kehangatan. Aku mencintaimu dengan segenap jiwa dan raga, dan aku akan terus berusaha menjadi pasangan terbaik untukmu. Mari kita lewati hari-hari indah ini bersama, merajut mimpi, dan membangun masa depan yang penuh cinta.</p>
+                <p>Dengan segala cinta yang aku miliki, untuk kamu yang selalu ada di hatiku.</p>
+                <p><b>Selamanya milikmu.</b></p>
+                <p>Kamu adalah alasan aku bangun setiap pagi dengan senyum di wajah dan hati yang penuh rasa syukur. Kehadiranmu membawa cahaya dan warna yang membuat hidup ini luar biasa. Aku bersyukur bisa melewati setiap hari dengan kamu di sisiku, menemani dalam suka dan duka.</p>
+                <p>Setiap saat yang kita habiskan bersama, aku selalu belajar lebih banyak tentang arti cinta sejati, kesabaran, dan pengertian. Aku ingin menjadi pria terbaik untukmu, yang selalu mendukung impian dan harapanmu, serta menjaga kebahagiaan kita bersama.</p>
+                <p>Bersamamu, aku merasa lengkap dan utuh. Aku yakin bahwa kita akan melewati semua tantangan dan rintangan kehidupan dengan cinta yang kuat dan komitmen yang tulus. Aku mencintaimu lebih dari kata-kata yang bisa kuungkapkan.</p>
+            </div>
+
+            <div class="gallery">
+                <img src="img/IMG_20250802_160001_869.jpg" alt="Foto 1" />
+                <img src="img/IMG_20250802_161243_002.jpg" alt="Foto 2" />
+                <img src="img/IMG_20251015_142405_168.jpg" alt="Foto 3" />
+                <img src="img/IMG_20251017_191619_972.jpg" alt="Foto 4" />
+                <img src="img/IMG_20251017_191623_218.jpg" alt="Foto 5" />
+            </div>
+        </div>
+
+        <div class="heart">❤️</div>
+    </div>
+
+    <script>
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const mainContent = document.getElementById('main-content');
+        const loveButton = document.getElementById('love-button');
+        const audioPlayer = document.getElementById('audio-player');
+
+        loveButton.addEventListener('click', () => {
+            // Hide welcome screen and show main content
+            welcomeScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+
+            // Unmute and play audio
+            audioPlayer.muted = false;
+            audioPlayer.play().catch((e) => {
+                console.log('Error playing audio:', e);
+            });
+        });
+    </script>
+</body>
+</html>
